@@ -1,0 +1,10 @@
+# def get_info(name, town, age):
+#     return f"This is {name} from {town} and he is {age} years old"
+#  arguments must be the same as keys in the dict
+
+def get_info(**kwargs):
+    return f"This is {kwargs.get('name')} from {kwargs.get('town')} and he is {kwargs.get('age')} years old"
+
+
+print(get_info(**{"name": "George", "town": "Sofia", "age": 20}))
+print(get_info(name="George", town="Sofia", age=20))  # equivalent
